@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>TITLE</title>
+  <title>Colmar Academy</title>
   <link href="./resources/css/reset.css" type="text/css" rel="stylesheet" />
   <link href="./resources/css/style.css" type="text/css" rel="stylesheet" />
 </head>
@@ -9,7 +9,7 @@
 	<header>
 		<div class="site-header">
 			<div class="branding">
-				<ul>
+				<ul class="site-container">
 					<li><img src="./resources/images/ic-logo.svg" /></li>
 					<li>COLMAR</li>
 					<li>ACADEMY</li>
@@ -17,7 +17,7 @@
 			</div>
 			<div class="nav">
 				<ul>
-				<li>On campus</li>
+				<li><a href="#oncampus">On campus</a></li>
 				<li>Online</li>
 				<li>For companies</li>
 				<li>Sign in</li>
@@ -26,7 +26,7 @@
 		</div>
 	</header>
 	<div class="banner">
-		<div id="banner-img">
+		<div  class="site-container" id="banner-img">
 			<img src="./resources/images/banner.jpg" />
 		</div>
 		<div class="banner-content">
@@ -37,8 +37,65 @@
 			</div>
 		</div>
 	</div>
-	<footer>
-		(c) Colmar
+	<div class="site-container" id="oncampus">
+		<div id="oncampus-left">
+			<div id="oncampus-motto">
+				<img src="./resources/images/information-main.jpg" />
+			</div>
+			<div id="oncampus-quote">
+				<h1>It doesn't hurt to keep practicing</h1>
+				<p>"Curabitur vitae libero in ipsum portitor consequat.  Aliquam et commodo lectus, nec consequat neque.  Sed non accumsan urna.  Phasellus sed consequat ex.  Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
+				<h6>Emanuel, Sr. Strategist at Hiring.com</h6>
+			</div>
+		</div>
+		<div id="oncampus-right">
+			<ul>
+				<li>
+					<div class="campus-img">
+						<img src="./resources/images/information-orientation.jpg" />
+					</div>
+					<div class="campus-details">
+						<h3>Orientation date</h3>
+						<p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
+						<a href="#">Read more</a>
+					</div>
+				</li>
+				<li>
+					<div class="campus-img">
+						<img src="./resources/images/information-campus.jpg" />
+					</div>
+					<div class="campus-details">
+						<h3>Our campus</h3>
+						<p>Find which campus is close by you</p>
+						<a href="#">Read more</a>
+					</div>
+				</li>
+				<li>
+					<div class="campus-img">
+						<img src="./resources/images/information-guest-lecture.jpg" />
+					</div>
+					<div class="campus-details">
+						<h3>Our guest lecture</h3>
+						<p>Join a keynote with Oliver Sack about music in medical treatment</p>
+						<a href="#">Read more</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="subjects">
+
+	</div>
+	<footer class="site-container">
+		<div id="footer-left">
+			<span>(c) 2016 Colmar Academy.  All rights reserved</span>
+		</div>
+		<div id="footer-right">
+			<ul>
+				<li>Terms</li>
+				<li>Privacy</li>
+			</ul>
+		</div>
 	</footer>
 </body>
 </html>

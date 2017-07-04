@@ -1,46 +1,86 @@
+/* Fonts */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v14/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
 /* General */
 html {
 	background-color: #eee;
 	font-size: 16px;
-	font-family: Helvetica, sans-serif;
+	font-family: "Open Sans", sans-serif;
+	line-height: 1.5rem;
 }
 
 body {
 	margin: 0;
 }
 
-/* Header */
+.button {
+	background-color: #666;
+	color: white;
+	text-align: center;
+}
+
 header {
-		background-color: white;
+	background-color: white;
 }
 
 h1 {
-		font-size: 2rem;
-		color: #555;
-		font-weight: 800;
-		line-height: 1.2;
+	font-size: 2.5rem;
+	color: #555;
+	font-weight: 800;
+	line-height: 1.2;
 }
 
 h2 {
-		font-size: 1.5rem;
-		color: #555;
-		font-weight: 400;
-		line-height: 1.2;
+	font-size: 1.8rem;
+	color: #555;
+	font-weight: 400;
+	line-height: 1.2;
 }
 
+h3 {
+	font-size: 1.4rem;
+	color: #555;
+	font-weight: 800;
+	line-height: 1.8;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+p {
+	line-height: 1.5rem;
+}
+
+.site-container {
+	padding-left: 1.6rem;
+}
+
+/* Header */
 .site-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 4rem;
 	font-size: 1.2rem;
+	z-index: 10;
+	border-bottom: 1px solid #ccc;
 }
 
 .branding ul {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin-left: 1.5rem;
 	font-size: 1.5rem;
 }
 
@@ -64,45 +104,118 @@ h2 {
 	padding-right: 1rem;	
 }
 
+/* Banner */
 .banner {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	border: 3px solid red;
 }
 
 .banner-content {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	border: 2px solid blue;
 	height: 20rem;	
-	width: 20rem;
-	padding-left: 1rem;
-}
-
-.banner img {
-	width: 70%;
-	padding: 2rem 1.5rem;
-	border: 2px solid black;
-}
-
-.button {
-	background-color: #666;
-	color: white;
-	text-align: center;
+	width: 25rem;
+	padding-left: 5rem;
+	padding-right: 10rem;
 }
 
 #banner-img {
-	background-color: lightblue;
-	width: 70rem;
+	width: 60%;
+}
+
+.banner img {
+	max-width: 100%;
+	padding: 2rem 0;
 }
 
 .button-large {
 	padding: 0.5rem 1rem;
 }
 
-footer {
-	padding-bottom: 2rem;
+/* On-Campus Section */
+#oncampus {
+	display: flex;
 	background-color: white;
+}
+
+#oncampus-left {
+	display: flex;
+	flex-direction: column;
+	max-width: 60%;
+	padding-right: 1.5rem;
+	padding-top: 2rem;
+	border-right: 1px solid #ccc;
+}
+
+#oncampus-left img {
+		max-width: 100%;
+		padding-bottom: 2rem;
+}
+
+#oncampus-right {
+	display: flex;
+	flex-direction: column;
+	padding-top: 1rem;
+}
+
+#oncampus-right ul {
+	display: flex;
+	flex-direction: column;
+}
+
+#oncampus-right li {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0 1rem 1rem 1rem;
+	min-width: 26.4375rem;
+}
+
+.campus-img {
+	max-width: 35%;
+	padding: 1rem;
+}
+
+.campus-details {
+	display: flex;
+	flex-direction: column;
+	margin-left: 1rem;
+}
+
+#oncampus-right img {
+	max-width: 100%;
+}
+
+#oncampus-right li:nth-child(3) {
+	background-color: #ccc;
+}
+
+#oncampus a {
+	color: rgb(0, 100, 150);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+#oncampus-quote h1, p {
+	padding-bottom: 1.5rem;
+}
+
+#oncampus-quote h6 {
+	font-style: italic;
+}
+
+/* Footer */
+footer {
+	padding-top: 2rem;
+	padding-bottom: 5rem;
+	background-color: white;
+	border-top: 1px solid #eee;
+	justify-content: space-between;
+}
+
+.footer-right ul {
+	display: flex;
+	flex-direction: row;
 }
