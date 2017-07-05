@@ -32,7 +32,7 @@ header {
 h1 {
 	font-size: 2.5rem;
 	color: #555;
-	font-weight: 800;
+	font-weight: 900;
 	line-height: 1.2;
 }
 
@@ -134,38 +134,42 @@ p {
 	padding: 0.5rem 1rem;
 }
 
-/* On-Campus Section */
-#oncampus {
+/* On-Campus and Thesis Sections */
+.two-column-container {
 	display: flex;
 	background-color: white;
 }
 
-#oncampus-left {
+.two-column-container-left {
 	display: flex;
 	flex-direction: column;
 	max-width: 60%;
-	padding-right: 1.5rem;
-	padding-top: 2rem;
+	padding: 2rem 1.5rem 3rem 0;
 	border-right: 1px solid #ccc;
 }
 
-#oncampus-left img {
-		max-width: 100%;
-		padding-bottom: 2rem;
+#thesis-left {
+	border-right: none;
 }
 
-#oncampus-right {
+.two-column-container-left img,
+#thesis-video video {
+	max-width: 100%;
+	padding-bottom: 2rem;
+}
+
+.two-column-container-right {
 	display: flex;
 	flex-direction: column;
-	padding-top: 1rem;
+	padding-top: 2rem;
 }
 
-#oncampus-right ul {
+.two-column-container-right ul {
 	display: flex;
 	flex-direction: column;
 }
 
-#oncampus-right li {
+.two-column-container-right li {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -173,23 +177,24 @@ p {
 	min-width: 26.4375rem;
 }
 
-.campus-img {
+.campus-img, .thesis-img {
 	max-width: 35%;
 	padding: 1rem;
 }
 
-.campus-details {
+.campus-details, .thesis-details {
 	display: flex;
 	flex-direction: column;
 	margin-left: 1rem;
 }
 
-#oncampus-right img {
+.two-column-container-right img {
 	max-width: 100%;
 }
 
-#oncampus-right li:nth-child(3) {
-	background-color: #ccc;
+.two-column-container-right li:nth-child(3),
+.two-column-container-right li:first-child {
+	background-color: #ddd;
 }
 
 #oncampus a {
@@ -206,16 +211,62 @@ p {
 	font-style: italic;
 }
 
+#thesis-title {
+	background-color: white;
+	text-align: center;
+	padding: 2rem 0 1rem 0;
+}
+
+/* Online Curriculum */
+#study-areas {
+}
+
+#study-areas-title h1 {
+	text-align: center;
+	padding: 2rem 0 1rem 0;
+}
+
+#subjects {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.subject-box {
+	background-color: white;
+	margin: 1rem;
+	max-width: 25%;
+}
+
+.subject-box img {
+	max-width: 100%;
+}
+
+.subject-box-content {
+	padding: 1rem;
+}
+
+.subject-box-content p {
+	padding: 0.5rem 0 0 0;
+	margin: 0;
+}
+
 /* Footer */
 footer {
 	padding-top: 2rem;
 	padding-bottom: 5rem;
 	background-color: white;
-	border-top: 1px solid #eee;
+	border-top: 2px solid #eee;
 	justify-content: space-between;
+	display: flex;
 }
 
-.footer-right ul {
+#footer-right ul {
 	display: flex;
 	flex-direction: row;
 }
+
+#footer-right li {
+	padding-right: 1rem;
+}
+
