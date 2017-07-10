@@ -7,7 +7,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
-/* General */
+/*************************** General *****************************/
 html {
 	background-color: #eee;
 	font-size: 16px;
@@ -66,22 +66,34 @@ p {
 	padding-left: 1.6rem;
 }
 
-/* Header */
+.main, .site-container {
+	z-index-0;
+}
+
+/**************************** Header *****************************/
 .site-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 4rem;
 	font-size: 1.2rem;
-	z-index: 10;
 	border-bottom: 1px solid #ccc;
+	position: fixed;
+	background-color: goldenrod;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+
+.site-header, .site-header.a {
+	font-weight: 900;
 }
 
 .branding ul {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	font-size: 1.5rem;
+	font-size: 1.6rem;
 }
 
 .branding img {
@@ -96,19 +108,24 @@ p {
 	font-weight: bold;
 }
 
-.nav ul {
+.nav-desktop ul {
 	display: flex;
 }
 
-.nav li {
+.nav-desktop li {
 	padding-right: 1rem;	
 }
 
-/* Banner */
+.nav-mobile {
+	display: none;
+}
+
+/*************************** Banner ******************************/
 .banner {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	margin-top: 4rem;	
 }
 
 .banner-content {
@@ -132,9 +149,59 @@ p {
 
 .button-large {
 	padding: 0.5rem 1rem;
+	width: 20rem;
+	align-self: center;
 }
 
-/* On-Campus and Thesis Sections */
+@media only screen and (max-width: 760px) {
+	.nav-desktop, .branding {
+		display: none;
+	}
+	
+	.nav-mobile {
+		display: flex;
+		justify-content: stretch;
+		width: 100%;
+	}
+	
+	.nav-mobile ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding: 0 4rem;
+	}
+
+	.nav-mobile li {
+	}
+					
+	.banner {
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	#banner-img {
+		width: 100%;
+		padding: 0;
+	}
+
+	.banner-content {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		justify-content: space-between;
+	}
+	
+	.site-container {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+
+/****************** On-Campus and Thesis Sections ****************/
 .two-column-container {
 	display: flex;
 	background-color: white;
@@ -156,6 +223,16 @@ p {
 #thesis-video video {
 	max-width: 100%;
 	padding-bottom: 2rem;
+}
+
+@media only screen and (max-width: 760px) {
+	.site-container {
+		padding: 0;
+	}
+	
+	.two-column-container-left {
+		display: none;
+	}
 }
 
 .two-column-container-right {
@@ -192,9 +269,45 @@ p {
 	max-width: 100%;
 }
 
-.two-column-container-right li:nth-child(3),
-.two-column-container-right li:first-child {
+#oncampus-right li:nth-child(3),
+#thesis-right li:first-child {
 	background-color: #ddd;
+}
+
+@media only screen and (max-width: 760px) {
+	.two-column-container-right li {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+	}
+	
+	.two-column-container {
+		display: inline;
+	}
+	
+	#thesis-right, #thesis-description {
+		display: none;
+	}
+	
+	#thesis-left {
+		display: flex;
+	}
+	
+	#thesis-video {
+		margin: 0;
+		min-width: 100;
+	}
+	
+	#oncampus-right li:nth-child(3),
+	#oncampus-right li,
+	#thesis-right li {
+		background-color: white;
+		padding: 0;
+	}	
+
+  .two-column-container-right li {	
+		align-items: flex-start;
+	}
 }
 
 #oncampus a {
@@ -217,7 +330,7 @@ p {
 	padding: 2rem 0 1rem 0;
 }
 
-/* Online Curriculum */
+/*********************** Online Curriculum **********************/
 #study-areas {
 }
 
@@ -226,7 +339,7 @@ p {
 	padding: 2rem 0 1rem 0;
 }
 
-#subjects {
+#subjects-desktop {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
@@ -251,11 +364,36 @@ p {
 	margin: 0;
 }
 
-/* Footer */
+#subjects-mobile {
+	display: none;
+}
+
+@media only screen and (max-width: 760px) {
+	#subjects-desktop {
+		display: none;
+	}
+	
+	#subjects-mobile {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	#subjects-mobile h3 {
+		padding: 1rem;
+		background-color: #ddd;
+		margin: 0.5rem 1rem;
+	}
+
+	#study-areas {
+		background-color: white;
+	}
+}
+
+/**************************** Footer *****************************/
 footer {
 	padding-top: 2rem;
 	padding-bottom: 5rem;
-	background-color: white;
+	background-color: goldenrod;
 	border-top: 2px solid #eee;
 	justify-content: space-between;
 	display: flex;
@@ -270,3 +408,18 @@ footer {
 	padding-right: 1rem;
 }
 
+@media only screen and (max-width: 760px) {
+	#footer-right {
+		display: none;
+	}
+	
+	footer {
+		align-items: center;
+		border-top: 1px solid #ccc;		
+	}
+	
+	#footer-left {
+		padding: 2.5rem 0 1rem 1rem;
+		padding-top: 2.5rem;
+	}
+}
