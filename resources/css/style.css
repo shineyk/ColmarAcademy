@@ -191,7 +191,7 @@ p {
 	}
 
 	.banner-content {
-		width: 100%;
+		width: auto;
 		padding: 0 0 0 1rem;
 		margin: 0;
 		justify-content: space-between;
@@ -315,8 +315,8 @@ p {
 	}
 	
 	.campus-img, .thesis-img {
-		width: 100%;
-		padding: 1rem;
+		width: auto;
+		padding: 1rem 0;
 	}	
 	
 	.two-column-container-right {
