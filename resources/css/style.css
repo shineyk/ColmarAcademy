@@ -148,9 +148,8 @@ p {
 }
 
 .button-large {
-	padding: 0.5rem 1rem;
-	width: 20rem;
-	align-self: center;
+	padding: 1rem 1rem;
+	width: 12rem;
 }
 
 @media only screen and (max-width: 760px) {
@@ -188,9 +187,10 @@ p {
 
 	.banner-content {
 		width: 100%;
-		padding: 0;
+		padding: 0 0 0 1rem;
 		margin: 0;
 		justify-content: space-between;
+		padding-bottom: 1rem;
 	}
 	
 	.site-container {
@@ -251,12 +251,6 @@ p {
 	flex-direction: row;
 	align-items: center;
 	padding: 0 1rem 1rem 1rem;
-	min-width: 26.4375rem;
-}
-
-.campus-img, .thesis-img {
-	max-width: 35%;
-	padding: 1rem;
 }
 
 .campus-details, .thesis-details {
@@ -265,13 +259,13 @@ p {
 	margin-left: 1rem;
 }
 
-.two-column-container-right img {
+.two-column-container-right li {
 	max-width: 100%;
 }
 
-#oncampus-right li:nth-child(3),
-#thesis-right li:first-child {
-	background-color: #ddd;
+.campus-img, .thesis-img {
+	width: 30%;
+	padding: 0;
 }
 
 @media only screen and (max-width: 760px) {
@@ -279,6 +273,11 @@ p {
 		display: flex;
 		flex-direction: column;
 		padding: 1rem;
+	}
+	
+	.two-column-container-left {
+		max-width: 100%;
+		padding: 0;
 	}
 	
 	.two-column-container {
@@ -307,6 +306,16 @@ p {
 
   .two-column-container-right li {	
 		align-items: flex-start;
+	}
+	
+	.campus-img, .thesis-img {
+		max-width: 100%;
+		padding: 1rem;
+	}	
+	
+	.two-column-container-right {
+		background-color: white;
+		padding-bottom: 2rem;
 	}
 }
 
@@ -386,6 +395,7 @@ p {
 
 	#study-areas {
 		background-color: white;
+		border-top: 1px solid #ddd;
 	}
 }
 
