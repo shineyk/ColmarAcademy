@@ -152,6 +152,11 @@ p {
 	width: 12rem;
 }
 
+.button-large:hover {
+	background-color: goldenrod;
+	text-color: black;
+}
+
 @media only screen and (max-width: 760px) {
 	.nav-desktop, .branding {
 		display: none;
@@ -260,17 +265,13 @@ p {
 	max-width: 65%;
 }	
 
-.campus-img img, .thesis-img img {
-	max-width: 100%;
-}
-
 .two-column-container-right li {
 	max-width: 100%;
 }
 
 .campus-img, .thesis-img {
-	width: 30%;
 	padding: 0;
+	max-width: 100%;
 }
 
 @media only screen and (max-width: 760px) {
@@ -345,9 +346,6 @@ p {
 }
 
 /*********************** Online Curriculum **********************/
-#study-areas {
-}
-
 #study-areas-title h1 {
 	text-align: center;
 	padding: 2rem 0 1rem 0;
@@ -402,6 +400,11 @@ p {
 		background-color: white;
 		border-top: 1px solid #ddd;
 	}
+}
+
+.subject-box:hover,
+.two-column-container-right li:hover {
+	background-color: #ebcb7a;
 }
 
 /**************************** Footer *****************************/
