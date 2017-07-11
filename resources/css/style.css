@@ -257,6 +257,11 @@ p {
 	display: flex;
 	flex-direction: column;
 	margin-left: 1rem;
+	max-width: 65%;
+}	
+
+.campus-img img, .thesis-img img {
+	max-width: 100%;
 }
 
 .two-column-container-right li {
@@ -309,7 +314,7 @@ p {
 	}
 	
 	.campus-img, .thesis-img {
-		max-width: 100%;
+		width: 100%;
 		padding: 1rem;
 	}	
 	
