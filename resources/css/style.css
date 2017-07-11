@@ -154,7 +154,7 @@ p {
 
 .button-large:hover {
 	background-color: goldenrod;
-	text-color: black;
+	font-weight: 800;
 }
 
 @media only screen and (max-width: 760px) {
