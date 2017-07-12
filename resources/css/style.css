@@ -20,38 +20,35 @@ body {
 }
 
 .button {
-	background-color: #666;
+	background-color: goldenrod;
 	color: white;
 	text-align: center;
 }
 
-header {
-	background-color: white;
-}
-
 h1 {
 	font-size: 2.5rem;
-	color: #555;
+	color: #434481;
 	font-weight: 900;
 	line-height: 1.2;
 }
 
 h2 {
 	font-size: 1.8rem;
-	color: #555;
+	color: #434481;
 	font-weight: 400;
 	line-height: 1.2;
 }
 
 h3 {
 	font-size: 1.4rem;
-	color: #555;
+	color: #434481;
 	font-weight: 800;
 	line-height: 1.8;
 }
 
 a {
 	text-decoration: none;
+	color: #434481;
 }
 
 a:visited {
@@ -77,9 +74,8 @@ p {
 	align-items: center;
 	height: 4rem;
 	font-size: 1.2rem;
-	border-bottom: 1px solid #ccc;
 	position: fixed;
-	background-color: goldenrod;
+	background-color: #ebcb7a;
 	top: 0;
 	width: 100%;
 	z-index: 10;
@@ -94,18 +90,23 @@ p {
 	flex-direction: row;
 	align-items: center;
 	font-size: 1.6rem;
+	padding: 0.4rem 1rem 0.4rem 0.5rem;
 }
 
 .branding img {
-	height: 3rem;
+	height: 3.5rem;
+	padding-top: .5rem;
 }
 
 .branding li:last-child {
-	color: gray;
+	color: black;
+	font-weight: 400;
 }
 
 .branding li:nth-child(2) {
-	font-weight: bold;
+	color: #ae8319;
+	font-weight: 900;
+	margin-right: .20rem;
 }
 
 .nav-desktop ul {
@@ -118,6 +119,10 @@ p {
 
 .nav-mobile {
 	display: none;
+}
+
+.nav-desktop, .nav-mobile {
+	color: #434481;
 }
 
 /*************************** Banner ******************************/
@@ -153,7 +158,8 @@ p {
 }
 
 .button-large:hover {
-	background-color: goldenrod;
+	background-color: #ebcb7a;
+	border: 1px solid goldenrod;
 	font-weight: 800;
 }
 
@@ -417,6 +423,7 @@ p {
 		padding: 1rem;
 		background-color: #ddd;
 		margin: 0.5rem 1rem;
+		color: #555;
 	}
 
 	#study-areas {
@@ -434,7 +441,7 @@ p {
 footer {
 	padding-top: 2rem;
 	padding-bottom: 5rem;
-	background-color: goldenrod;
+	background-color: #ebcb7a;
 	border-top: 2px solid #eee;
 	justify-content: space-between;
 	display: flex;
