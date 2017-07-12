@@ -157,7 +157,19 @@ p {
 	font-weight: 800;
 }
 
+.mobile {
+	display: none;
+}
+
 @media only screen and (max-width: 760px) {
+	.desktop {
+		display: none;
+	}
+
+	.mobile {
+		display: block;
+	}
+	
 	.nav-desktop, .branding {
 		display: none;
 	}
@@ -243,7 +255,7 @@ p {
 .two-column-container-right {
 	display: flex;
 	flex-direction: column;
-	padding-top: 2rem;
+	padding-top: 1rem;
 }
 
 .two-column-container-right ul {
@@ -255,14 +267,14 @@ p {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	padding: 0 1rem 1rem 1rem;
+	padding: 1rem;
 }
 
 .campus-details, .thesis-details {
 	display: flex;
 	flex-direction: column;
 	margin-left: 1rem;
-	max-width: 65%;
+	width: 65%;
 }	
 
 .two-column-container-right li {
@@ -271,7 +283,11 @@ p {
 
 .campus-img, .thesis-img {
 	padding: 0;
-	max-width: 100%;
+	width: 35%;
+}
+
+.campus-img img, .thesis-img img {
+	width: 100%;
 }
 
 @media only screen and (max-width: 760px) {
@@ -322,7 +338,12 @@ p {
 	.two-column-container-right {
 		background-color: white;
 		padding-bottom: 2rem;
+		padding-left: 1rem;
 	}
+	
+	.campus-details, .thesis-details {
+		padding-left: 1rem;
+	}		
 }
 
 #oncampus a {
@@ -388,6 +409,8 @@ p {
 	#subjects-mobile {
 		display: flex;
 		flex-direction: column;
+		padding-bottom: 2rem;
+		border: 1px solid #ddd;
 	}
 	
 	#subjects-mobile h3 {
