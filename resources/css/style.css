@@ -7,6 +7,22 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v8/ATKpv8nLYAKUYexo8iqqrg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('PT Sans Italic'), local('PTSans-Italic'), url(https://fonts.gstatic.com/s/ptsans/v8/PIPMHY90P7jtyjpXuZ2cLFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
 /*************************** General *****************************/
 html {
 	background-color: #eee;
@@ -79,6 +95,7 @@ p {
 	top: 0;
 	width: 100%;
 	z-index: 10;
+	border-bottom: 1px solid goldenrod;
 }
 
 .site-header, .site-header.a {
@@ -155,11 +172,12 @@ p {
 .button-large {
 	padding: 1rem 1rem;
 	width: 12rem;
+	border: 1px solid goldenrod;
 }
 
 .button-large:hover {
 	background-color: #ebcb7a;
-	border: 1px solid goldenrod;
+	border: 1px solid #ebcb7a;
 	font-weight: 800;
 }
 
@@ -361,8 +379,9 @@ p {
 	padding-bottom: 1.5rem;
 }
 
-#oncampus-quote h6 {
-	font-style: italic;
+#oncampus-quote p, h6 {
+	font-family: 'PT Sans';
+  font-style: italic;
 }
 
 #thesis-title {
@@ -400,6 +419,7 @@ p {
 .subject-box-content p {
 	padding: 0.5rem 0 0 0;
 	margin: 0;
+	max-width: 100%;
 }
 
 #subjects-mobile {
@@ -415,7 +435,6 @@ p {
 		display: flex;
 		flex-direction: column;
 		padding-bottom: 2rem;
-		border: 1px solid #ddd;
 	}
 	
 	#subjects-mobile h3 {
